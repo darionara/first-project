@@ -1,0 +1,59 @@
+:root {
+    --light-blue: rgb(223, 235, 250);
+    --medium-blue: rgb(139, 186, 247);
+    --dark-blue: rgb(16, 74, 175)
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    padding-top: 8rem;
+}
+
+.counter {
+    border-radius: 1rem;
+    background-color: var(--light-blue);
+    padding: 0.5rem 1rem;
+    width: 15rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.counter__input {
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid var(--medium-blue);
+    border-radius: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    text-align: center;
+}
+
+.counter__input:focus-visible {
+    border: 2px solid var(--dark-blue);
+    outline: none; 
+} 
+
+.counter__sign {
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter__sign span {
+    font-size: 3.5rem;
+    font-weight: 400;
+}
