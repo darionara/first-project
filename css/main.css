@@ -72,6 +72,7 @@ a {
 
 .menu {
     opacity: 0;
+    visibility: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,6 +90,7 @@ a {
 
 .menu--active {
     opacity: 1;
+    visibility: visible;
 }
 
 .menu__item {
