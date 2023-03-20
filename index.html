@@ -5,33 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Project</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="main.js" defer></script>
 </head>
 <body>
   <header>
     <nav class="navbar">
       <a href="#" class="navbar__logo">Logo</a>
-      <ul class="navbar__menu">
+      <ul class="menu" id="menu">
         <li class="menu__item">
-          <a href="#" class="menu__link">Home</a>
+          <a href="./index.html" class="menu__link">Home</a>
         </li>
         <li class="menu__item">
           <a href="./carousel.html" class="menu__link">Carousel</a>
         </li>
         <li class="menu__item">
-          <a href="https://github.com/darionara" class="menu__link">GitHub</a>
+          <a href="https://github.com/darionara" class="menu__link" target="_blank" rel="noopener noreferrer">GitHub</a>
         </li>
         <li class="menu__item">
-          <a href="https://www.linkedin.com/in/daria-ziobrowska-91246a17b/" class="menu__link">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/daria-ziobrowska-91246a17b/" class="menu__link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </li>
       </ul>
-      <div class="hamburger">
+      <button class="hamburger" id="hamburger">
         <span class="hamburger__bar"></span>
         <span class="hamburger__bar"></span>
         <span class="hamburger__bar"></span>
-      </div>
+      </button>
     </nav>
   </header>
 
@@ -39,5 +38,7 @@
 
     </main>
 
+    
+    <script src="./js/main.js"></script>
 </body>
 </html>
