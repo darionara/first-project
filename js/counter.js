@@ -1,6 +1,6 @@
-const minus = document.getElementById('counter__sign--minus');
-const plus = document.getElementById('counter__sign--plus');
-const inputField = document.getElementById('counter__input');
+const minus = document.getElementById('counter-minus');
+const plus = document.getElementById('counter-plus');
+const inputField = document.getElementById('counter-input');
 
 const decrement = () => {
     inputField.value--;
