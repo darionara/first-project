@@ -12,6 +12,12 @@ header {
     box-shadow: 0 3px 5px -5px gray;
 }
 
+main {
+    display: grid;
+    place-items: center;
+    padding-top: 8rem;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -72,6 +78,7 @@ a {
 
 .menu {
     opacity: 0;
+    visibility: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,6 +96,7 @@ a {
 
 .menu--active {
     opacity: 1;
+    visibility: visible;
 }
 
 .menu__item {
