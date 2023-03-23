@@ -1,19 +1,13 @@
 :root {
     --light-blue: rgb(223, 235, 250);
     --medium-blue: rgb(139, 186, 247);
-    --dark-blue: rgb(16, 74, 175)
+    --dark-blue: rgb(16, 74, 175);
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-main {
-    display: grid;
-    place-items: center;
-    padding-top: 8rem;
 }
 
 .counter {

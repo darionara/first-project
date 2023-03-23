@@ -12,6 +12,12 @@ header {
     box-shadow: 0 3px 5px -5px gray;
 }
 
+main {
+    display: grid;
+    place-items: center;
+    padding-top: 8rem;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
