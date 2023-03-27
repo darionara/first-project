@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Project</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/carousel.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
   <header>
@@ -35,10 +37,47 @@
   </header>
 
     <main>
+      <div class="carousel__wrapper">
+        
+        <div class="carousel">
 
+          <button class="carousel__button">
+            <span class="material-symbols-outlined">
+              arrow_back_ios
+            </span>
+          </button>
+  
+          <div class="carousel__product">
+            <a href="#">
+              <img class="product__image" src="./images/dimpa-torba-przezroczysty.avif" alt="Torba DIMPA">
+              <img class="product__image" id="image-hover" src="./images/dimpa-torba-przezroczysty-2.avif" alt="Torba DIMPA">
+            </a>
+            <div class="product__info">
+              <h3 class="product__title">dimpa</h3>
+              <p class="product__description">Torba, 65x22x65 cm</p>
+              <div class="product__price">
+                <span class="product__price-integer">14</span>
+                <span class="product__price-decimals">,99</span>
+              </div>
+              <span class="product__favorite material-symbols-outlined">
+                favorite
+              </span>
+            </div>
+          </div>
+  
+          <button class="carousel__button">
+            <span class="material-symbols-outlined">
+              arrow_forward_ios
+            </span>
+          </button>
+        </div>
+
+        <div class="carousel__scroll"></div>
+
+      </div>
     </main>
 
-    
     <script src="./js/main.js"></script>
+    <script src="./js/carousel.js"></script>
 </body>
 </html>
