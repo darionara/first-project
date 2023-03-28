@@ -1,6 +1,6 @@
-const leftScrollButton = document.getElementById("back-button");
-const rightScrollButton = document.getElementById("forward-button");
-const scrollableArea = document.getElementById("carousel");
+const leftScrollButton = document.getElementById('back-button');
+const rightScrollButton = document.getElementById('forward-button');
+const scrollableArea = document.getElementById('carousel');
 
 const scrollLeft = () => {
     scrollableArea.scrollBy({ 
@@ -20,3 +20,11 @@ const scrollRight = () => {
 
 leftScrollButton.addEventListener('click', scrollRight);
 rightScrollButton.addEventListener('click', scrollLeft);
+
+/* Make scrollbar thicker after hovering on carousel area */
+
+const toggleScrollbar = () => {
+  carousel.classList.toggle('active');
+}
+
+scrollableArea.addEventListener('mouseover', toggleScrollbar);
