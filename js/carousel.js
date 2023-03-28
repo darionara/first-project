@@ -20,11 +20,3 @@ const scrollRight = () => {
 
 leftScrollButton.addEventListener('click', scrollRight);
 rightScrollButton.addEventListener('click', scrollLeft);
-
-/* Make scrollbar thicker after hovering on carousel area */
-
-const toggleScrollbar = () => {
-  carousel.classList.toggle('active');
-}
-
-scrollableArea.addEventListener('mouseover', toggleScrollbar);
