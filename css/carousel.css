@@ -2,14 +2,14 @@
     color: #000;
 }
 
-.carousel__wrapper {
+.carousel {
     width: 100%;
     padding: 6rem 1rem;
     position: relative;
     overflow: hidden;
 }
 
-.carousel__wrapper:hover .carousel__button {
+.carousel:hover .carousel__button {
     display: block;
 }
 
@@ -20,6 +20,7 @@
     top: 14rem;
     background-color: #000;
     color: #fff;
+    height: 2.625rem;
     border-radius: 50%;
     border: 2px;
     padding: 5px;
@@ -50,7 +51,7 @@
 
 /* Carousel with products */
 
-.carousel {
+.carousel__wrapper {
     display: flex;
     flex-wrap: nowrap;
     position: relative;
@@ -149,33 +150,21 @@
     transform: translateX(0);
 } */
 
-.carousel::-webkit-scrollbar {
+.carousel__wrapper::-webkit-scrollbar {
     height: 0.25rem;
-    cursor: pointer !important;
 }
 
-.carousel::-webkit-scrollbar-thumb {
+.carousel__wrapper::-webkit-scrollbar-thumb {
     background-color: #000;
     border-radius: 10px;
-    cursor: pointer !important;
 }
-/* 
-.carousel::-webkit-scrollbar-thumb:active {
-    height: 0.5rem;
-}
- */
-/* 
-.carousel::-webkit-scrollbar-thumb:hover {
-    cursor: pointer !important;
-}
- */
-.carousel::-webkit-scrollbar-track {
+
+.carousel__wrapper::-webkit-scrollbar-track {
     background-color: #c5c4c4;
-    cursor: pointer !important;
     border-radius: 10px;
 } 
 
-.carousel::-webkit-scrollbar-button {
+.carousel__wrapper::-webkit-scrollbar-button {
     display: none;
 }
 
@@ -186,7 +175,7 @@
         flex-basis: 80%;
     }
 
-    .carousel__wrapper {
+    .carousel {
         padding: 6rem 2rem;
     }
     
@@ -200,7 +189,7 @@
         flex-basis: 70%;
     }
 
-    .carousel__wrapper {
+    .carousel {
         padding: 6rem 3rem;
     }
 
@@ -214,7 +203,7 @@
         flex-basis: 60%;
     }
 
-    .carousel__wrapper {
+    .carousel {
         padding: 6rem 4rem;
     }
 
@@ -228,7 +217,7 @@
         flex-basis: 50%;
     }
 
-    .carousel__wrapper {
+    .carousel {
         padding: 6rem 5rem;
     }
 
@@ -250,7 +239,7 @@
 }
 
 @media only screen and (min-width: 1000px) {
-    .carousel__wrapper {
+    .carousel {
         max-width: 90%;
     }
     
@@ -260,7 +249,7 @@
 }
 
 @media only screen and (min-width: 1200px) {
-    .carousel__wrapper {
+    .carousel {
         max-width: 85%;
     }
     
