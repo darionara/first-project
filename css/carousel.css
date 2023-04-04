@@ -9,10 +9,6 @@
     overflow: hidden;
 }
 
-.carousel:hover .carousel__button {
-    display: block;
-}
-
 /* Back and forward buttons */
 
 .carousel__button {
@@ -26,7 +22,6 @@
     padding: 5px;
     cursor: pointer;
     z-index: 1;
-    display: none;
 }
 
 .carousel__button:hover {
@@ -42,6 +37,7 @@
 
 #back-button {
     margin-left: 1rem;
+    display: none;
 }
 
 #forward-button {
