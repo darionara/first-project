@@ -1,22 +1,23 @@
 
 const drawTree = () => {
-    // Hardcode
-    /*    let branches = ['\\*', '\\**', '\\***', '\\****', '\\*****'];
-      
-      for (let branch of branches) {
-          console.log(branch)
-        }
-
-    // OR
-        branches.forEach(branch => console.log(branch));
-    */
-    
-    // Is it ok?
       let branches = [];
-      
-      for (let i = 0; i <= 4; i++) {
+
+    // Using the repeat() method
+  /*  for (let i = 0; i <= 4; i++) {
         branches.push('\\');
         let starsToAdd = '*'.repeat(i + 1);
+        branches[i] += starsToAdd;
+        console.log(branches[i]);
+      }
+  */
+    
+    // Using the nested loop
+      for (let i = 0; i <= 4; i++) {
+        branches.push('\\');
+        let starsToAdd = '';
+        for (let j = 0; j < i + 1; j++) {
+          starsToAdd += '*';
+        }
         branches[i] += starsToAdd;
         console.log(branches[i]);
       }
