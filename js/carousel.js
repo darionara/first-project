@@ -1,7 +1,6 @@
 const backButton = document.getElementById('back-button');
 const forwardButton = document.getElementById('forward-button');
 const carousel = document.getElementById('carousel-wrapper');
-/* const carouselSlides = document.getElementsByClassName('carousel__product'); */
 
 /* Showing and hiding the carousel buttons depending on the relation between the .scrollWidth (the total width of the carousel) 
 and the .clientWidth (the width of the part of carousel the user actually sees) 
@@ -31,7 +30,31 @@ const showingButtons = () => {
     }
   };
 
-carousel.addEventListener("scroll", showingButtons);
+  function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
+  
+  function throttle(func, delay) {
+    let lastTime = 0;
+    return function executedFunction(...args) {
+      const now = new Date().getTime();
+      if (now - lastTime >= delay) {
+        func(...args);
+        lastTime = now;
+      }
+    };
+  }
+
+carousel.addEventListener("scroll", debounce(showingButtons, 100));
+carousel.addEventListener("scroll", throttle(showingButtons, 200));
 
 
 /* Displaying all the products in the carousel using the data from the outer file */
@@ -68,32 +91,6 @@ This allows to display all the products in the array rather than just the last o
 products.forEach((product) => {
   carousel.innerHTML += getProductHTML(product);
 });
-
-
-
-/* IT DOESN'T WORK... I THINK IT IS BECAUSE carouselSlides IS NOT AN ARRAY OF PRODUCTS,
-AM I RIGHT? */
-/* Showing and hiding the carousel buttons depending on the slide number */
-/* const updateCarouselButtons = (currentSlide) => {
-
-  // Show the forward button on all slides except the last slide
-  if (currentSlide < carouselSlides.length) {
-    forwardButton.style.display = "block";
-  } else {
-    forwardButton.style.display = "none";
-  }
-
-  // Show the previous button on all slides except the first slide
-  if (currentSlide > 1) {
-    backButton.style.display = "block";
-  } else {
-    backButton.style.display = "none";
-  }
-}; */
-/* I ALSO THINK USING onmouseover ISN'T THE BEST OPTION, BUT IF NOT, WHEN AND HOW THIS FUNCTION SHOULD BE INVOKED? */
-/* carousel.addEventListener('onmouseover', updateCarouselButtons); */
-
-
 
 /* Using buttons to scroll the slides of the value of the carousel.clientWidth */
 const scrollRight = () => {
