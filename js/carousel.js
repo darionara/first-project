@@ -8,7 +8,9 @@ and the .clientWidth (the width of the part of carousel the user actually sees)
 - .offsetWidth -> the viewable width of an element in pixels, including padding, border and scrollbar, but not the margin
 - .clientWidth -> the viewable width of an element in pixels, including padding, but not the border, scrollbar or margin
 */
-const showingButtons = () => { 
+const showingButtons = () => {
+  // thanks to the debounce function the scrollWidth value doesn't change on every scroll move but only after the time we have specified in the debounce function
+  console.log(carousel.scrollWidth);
   if (carousel.scrollWidth <= carousel.clientWidth) {  
     forwardButton.style.display='none';
     backButton.style.display='none'; 
@@ -42,7 +44,7 @@ const showingButtons = () => {
     };
   }
   
-  function throttle(func, delay) {
+/*   function throttle(func, delay) {
     let lastTime = 0;
     return function executedFunction(...args) {
       const now = new Date().getTime();
@@ -51,10 +53,10 @@ const showingButtons = () => {
         lastTime = now;
       }
     };
-  }
+  } */
 
 carousel.addEventListener("scroll", debounce(showingButtons, 100));
-carousel.addEventListener("scroll", throttle(showingButtons, 200));
+//carousel.addEventListener("scroll", throttle(showingButtons, 200));
 
 
 /* Displaying all the products in the carousel using the data from the outer file */
